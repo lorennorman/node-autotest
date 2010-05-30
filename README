@@ -1,0 +1,25 @@
+This is a project skeleton for development of an agile client-side Javascript library. 
+
+Features:
+- Sprockets for building Javascript files, allowing complex code hierarchies at development time.
+- Jasmine for testing, which gives a nice RSpec-like test suite syntax and makes no expectations of where the tests are run (in-browser vs CLI vs Selenium/CI)
+- NodeJS for auto-build and auto-test functionality:
+  - watches source files to auto-build the project
+  - watches spec files to auto-test the project
+
+Requirements:
+- Sprockets (http://getsprockets.org)
+- Jasmine (http://github.com/pivotal/jasmine)
+- NodeJS (http://nodejs.org)
+
+To invoke the auto-harness, run:
+node autotest.js
+
+And start the TDD cycle!
+
+TODO:
+- find a way to watch for file-change events in Node that doesn't rely on polling (highly ineffecient, bad for hardware)
+- watched files are only updated after a refresh, so newly created source files won't be seen until the build process runs again (ditto new spec files and the test process)
+- factor the autotest.js code into separate files
+- autotest strategies (Sprockets, Jasmine) should be overridable with the build/test tool of the users choice
+- expand the types of tool strategies available: minification, obfuscation, optimization, documentation, gzip
