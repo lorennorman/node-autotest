@@ -1,0 +1,3 @@
+//= require "framework"
+
+Framework.start();
